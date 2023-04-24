@@ -65,3 +65,19 @@
 		button[type="submit"]:hover {
 			background-color: #3367D6;
 		}	
+		
+		 
+		  .choice_btn {
+			/* color: #fff; */
+			padding: 10px 20px;
+			margin: 5px;
+			border: none;
+			border-radius: 5px;
+			font-size: 1.2em;
+			cursor: pointer;
+			transition: all 0.3s ease-in-out;
+		  }
+		  .choice_btn.active {
+			background-color: blue;
+			color: white;
+		  }

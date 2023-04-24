@@ -22,6 +22,11 @@
       <label for="message">Message :</label>
       <textarea id="message" name="message" rows="5" required></textarea>
     </div>
+    <div id="genre">
+      <h2>Vous êtes un étudiant ou un professionnel?</h2>
+      <button class="choice_btn" id="etudiant">Etudiant</button>
+      <button class="choice_btn" id="professionnel">Professionnel</button>
+    </div>
     <div id="checking">
         <div class="check_conditions">
             <label for="accepter-conditions">J'accepte les conditions d'utilisation :</label>
@@ -33,7 +38,27 @@
         </div>   
         
       </div>
+
     <button type="submit">Envoyer</button>    
   </form>
+  
+  <script>
+    // Récupération des éléments HTML dans le DOM
+    const btns = document.querySelectorAll(".choice_btn");
+
+    // Événements de clic sur les boutons
+    btns.forEach(function(btn) {
+      btn.addEventListener("click", function() {
+        // Désactive le bouton précédemment activé
+        const activeBtn = document.querySelector(".choice_btn.active");
+        if (activeBtn && activeBtn !== btn) {
+          activeBtn.classList.remove("active");
+        }
+
+        // Toggle la classe "active" sur le bouton cliqué
+        btn.classList.toggle("active");
+      });
+    });
+  </script>
 </body>
 </html>
